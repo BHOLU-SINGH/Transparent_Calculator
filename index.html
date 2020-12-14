@@ -24,12 +24,19 @@
 			<span class="num" onclick="document.calc.txt.value += '2' ">2</span>
 			<span class="num" onclick="document.calc.txt.value += '3' ">3</span>
 			<span class="num" onclick="document.calc.txt.value += '0' ">0</span>
-			<span class="num" onclick="document.calc.txt.value += '00' ">00</span>
 			<span class="num" onclick="document.calc.txt.value += '.' ">.</span>
+			<span class="num" onclick="del();">X</span>
 			<span class="num equal" onclick="document.calc.txt.value = eval(calc.txt.value)">=</span>
 		</form>
 		<h3>BHOLU SINGH</h3>
 	</div>
+	<script type="text/javascript">
+		function del()
+		{
+		   var prevalue = calc.txt.value;
+		   calc.txt.value = prevalue.substr(0,prevalue.length-1);
+		}
+	</script>
 	<script type="text/javascript" src="vanilla-tilt.js"></script>
 	<script type="text/javascript">
 		VanillaTilt.init(document.querySelector(".container"), {
